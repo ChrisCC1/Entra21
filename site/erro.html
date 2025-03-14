@@ -1,0 +1,25 @@
+<h1>Barra de progresso</h1>
+<progress id="progressBar" max="100" value="0"></progress>
+<span id="progressText">0%</span><br>
+<button onclick="startProgress()">Iniciar Processo</button>
+
+<script>
+    function startProgress() {
+        var progressBar = document.getElementById('progressBar');
+        var progressText = document.getElementById('progressText');
+        var value = 0;
+
+        var internal = setInterval(function () {
+            value += 10;
+            progressBar.value = value;
+            progressText.innerText = value + "%"; // Atualiza o texto ao lado da barra
+
+            if (value >= progressBar.max) { // Usa progressBar.max corretamente
+                clearInterval(internal); // Para o intervalo corretamente
+                progressText.innerText = "Completo!";
+                
+            }
+
+        }, 1000);
+    }
+</script>

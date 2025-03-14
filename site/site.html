@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+</head>
+
+<body>
+
+    <h1>Sitezinho</h1>
+    <p>Bem vindo ao meu site, aqui vou fazer uma lista legal</p>
+    <ul style="list-style: square;">
+        <li>Testando site</li>
+        <li>Testando site</li>
+        <li>Testando site</li>
+        <li>Testando site</li>
+    </ul>
+
+    <!--Botão de progresso-->
+
+    <progress id="progressBar" max="100" value="0">0%</progress>
+    <span id="progressText">0%</span><br>
+    <button onclick="startProgress()">Iniciar Processo</button>
+
+
+    <script>
+        function startProgress() {
+            var progressBar = document.getElementById('progressBar');
+            var progressText = document.getElementById('progressText');
+            var value = 0;
+
+            var internal = setInterval(function () {
+                value += 10;
+                progressBar.value = value;
+                progressText.innerText = value + "%";
+
+                if (value >= progressBar.max) {
+                    clearInterval(internal);
+                    progressText.innerText = "Completo!";
+                }
+            }, 1000);
+
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
