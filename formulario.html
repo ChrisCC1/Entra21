@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <fieldset>
+                
+    <h1>Modalidade de esporte</h1>
+
+    <form action="tabela.html" method="post" enctype="multipart/form-data">
+
+<fieldset>
+<legend>Informações pessoais</legend>
+        <!--Nome-->
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="name">
+
+<br><br><br>
+
+         <!--CPF-->
+        <label for="cpf">CPF:</label>
+        <input type="number" name="cpf" id="cpf">
+
+        <br><br<br>
+                <legend>Data de nascimento</legend>
+                <!--Hora e data de nascimento-->
+                <input type="date" name="nascimento">
+                <input type="time" name="horario">
+
+        <!--Idade-->
+        <label for="idade">Idade:</label>
+        <input type="number" name="idade" id="idade">
+</fieldset>
+        <!--Colocar para escrever maior-->
+        <fieldset>
+            <legend>Descrição</legend>
+        <label for="descricao"></label>
+        <textarea name="descricao" id="descricao" cols="30" rows="5">
+        </textarea>
+        </fieldset>
+        <!--Genero-->
+
+        <fieldset>
+<legend>Gênero</legend>
+        <label for="genero">Genero:</label>
+
+        <input type="radio" name="genero" value="m">
+        <label for="masculino">Masculino</label>
+
+        <input type="radio" name="genero" value="f">
+        <label for="feminino">Feminino</label>
+
+        <input type="radio" name="genero" value="nb">
+        <label for="nao-binario">nao binario</label>
+
+        <input type="radio" name="genero" value="pnd">
+        <label for="pnd">Prefiro não dizer</label>
+</fieldset>
+
+        <!--Checkbox, pode marcar mais de 1-->
+        <fieldset>
+                <legend>Modalidade</legend>
+        <input type="checkbox" name="interesses[]" value="esporte">
+        <label for="esporte">Esporte</label>
+        <input type="checkbox" name="interesses[]" value="esporte">
+        <label for="volei">Musica</label>
+        <input type="checkbox" name="interesses[]" value="esporte">
+        <label for="futebol">Musica</label>
+        <input type="checkbox" name="interesses[]" value="esporte">
+        <label for="basquete">Musica</label>
+</fieldset>
+<fieldset>
+        <legend>Se caso tiver problema de saúde, mandar atestado</legend>
+        <!--Envio de documento-->
+        <label for="doc">Enviar documento</label>
+        <input type="file" name="doc" accept=".pdf,.txt">
+</fieldset>
+<fieldset>
+        <legend>Data de nascimento</legend>
+        <!--Hora e data de nascimento-->
+        <input type="date" name="nascimento">
+        <input type="time" name="horario">
+</fieldset>
+
+<br><br><br>
+
+        <!--Um botão de reset e outro de enviar-->
+        <button type="reset">Limpar tudo</button>
+        <button type="submit">Enviar</button>
+
+    </form>
+</body>
+</html>
