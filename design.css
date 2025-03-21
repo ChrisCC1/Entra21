@@ -1,0 +1,12 @@
+.destaque {
+    display: block; margin: 0 auto; max-width: 100%;
+}
+
+#div {
+    width: 30%;
+    
+}
+
+#div fieldset{
+    width: 30%;
+}
